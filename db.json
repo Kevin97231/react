@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "name": "Test",
+      "price": "6",
+      "number": "27",
+      "category": "Test",
+      "id": "1"
+    },
+    {
+      "category": "Fruits",
+      "price": 1,
+      "number": 2,
+      "name": "Mango",
+      "id": "2"
+    },
+    {
+      "category": "Fruits",
+      "price": 2,
+      "number": 0,
+      "name": "Pineapple",
+      "id": "3"
+    },
+    {
+      "category": "Vegetables",
+      "price": 2,
+      "number": 4,
+      "name": "Broccoli",
+      "id": "4"
+    },
+    {
+      "id": "f0eb",
+      "category": "Test",
+      "name": "Test",
+      "number": "5",
+      "price": "5"
+    }
+  ]
+}

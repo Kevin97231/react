@@ -10,6 +10,7 @@ import Flux from "./components/view/Flux";
 import Exercice from "./components/view/Exercice";
 import LifeCycle from "./components/view/LifeCycle";
 import { Hook } from "./components/view/Hook"
+import { RequeteHttp } from "./components/view/RequeteHttp";
 
 function App() {
   return(
@@ -24,6 +25,7 @@ function App() {
             <Route path='/formulaire' element={<Formulaire/>} />
             <Route path='/flux' element={<Flux/>} />
             <Route path='/life-cycle' element={<LifeCycle/>} />
+            <Route path='/requete-http' element={<RequeteHttp/>} />
             <Route path='/exercice' element={<Exercice/>} />
           </Routes>
         </BrowserRouter>

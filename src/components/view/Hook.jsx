@@ -1,5 +1,7 @@
 import { useState } from "react";
-import HookUseState from "../HookUseState";
+import HookUseState from "../hookView/HookUseState";
+import {HookUseEffect} from "../hookView/HookUseEffect";
+
 
 export const Hook = () => {
   
@@ -10,7 +12,7 @@ export const Hook = () => {
             case 'useState':
                 return <HookUseState/>
             case 'useEffect':
-                return <></>
+                return <HookUseEffect/>
             default:
                 return <></>
         }

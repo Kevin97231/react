@@ -39,6 +39,9 @@ function Navbar() {
               <a href="/life-cycle">Cycle de vie</a>
             </li>
             <li>
+              <a href="/requete-http">Les requêtes HTTP</a>
+            </li>
+            <li>
               <a href="/exercice">Exercice</a>
             </li>
           </ul>
@@ -61,6 +64,9 @@ function Navbar() {
           </li>
           <li>
               <a href="/life-cycle">Cycle de vie</a>
+            </li>
+            <li>
+              <a href="/requete-http">Les requêtes HTTP</a>
             </li>
           <li>
               <a href="/exercice">Exercice</a>
