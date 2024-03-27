@@ -23,6 +23,8 @@ function Flux () {
 
         <br />
         { checked ? 'case chochée' : 'case non cochée'}
+
+
         </>
     )
 }
@@ -57,7 +59,9 @@ function CheckBox ({checked, onCheck}) {
             <label>
                 <input 
                     type="checkbox" 
-                    onChange= { (e) =>  onCheck(e.target.checked)}
+                    onChange= { (e) => {
+                        onCheck(e.target.checked)}
+                    }
                     checked= {checked}
                 />
             </label>
