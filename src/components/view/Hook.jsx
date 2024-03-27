@@ -1,27 +1,38 @@
 import { useState } from "react";
+import HookUseState from "../HookUseState";
 
-function Hook(){
-
-    const [count, setCount] = useState(0)
-
-    const increment = () => {
-        setCount((prevState) => prevState + 1);
+export const Hook = () => {
+  
+  const [chosenItem, setChosenItem] = useState('useState')
+  
+    const renderHookComponent = () => {
+        switch (chosenItem) {
+            case 'useState':
+                return <HookUseState/>
+            case 'useEffect':
+                return <></>
+            default:
+                return <></>
+        }
     }
 
-    const decrement = () => {
-        setCount( (prevState) => prevState - 1);
-    }
-
-    return(
-        <div className="w-fit m-auto">
-            <h1>Le hook useState</h1>
-            <div>
-                {count}
-            </div>
-            <button onClick={increment} className="border">+ 1</button>
-            <button onClick={decrement} className="border">- 1</button>
-        </div>
-    )
+    return (
+    <div className="flex">
+      <div>
+        <ul className="menu w-56 [&_li>*]:rounded-none">
+            {/* Voir si on peut récup le texte contenu entre les 2 balise <a></a> */}
+          <li onClick={() => setChosenItem('useState')}>
+            <a>useState</a>
+          </li>
+          <li onClick={() => setChosenItem('useEffect')}>
+            <a>useEffect</a>
+          </li>
+        </ul>
+      </div>
+      <div className="divider divider-horizontal divider-primary"></div>
+      <div className="w-full">
+        {renderHookComponent()}
+      </div>
+    </div>
+  );
 }
-
-export default Hook;
