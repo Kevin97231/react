@@ -41,7 +41,6 @@ function Exercice() {
 }
 
 
-
 const Parent = () => {
 
     const products = [
@@ -52,7 +51,6 @@ const Parent = () => {
         { category: 'Vegetables', price: '$4', number: 0, name: 'Carrot' },
         { category: 'Vegetables', price: '$1', number: 6, name: 'Zucchini' }
     ];
-
 
     const fruits = products.filter( product => product.category === 'Fruits')
     const legumes = products.filter( product => product.category === 'Vegetables')
@@ -102,7 +100,7 @@ const Enfant = ({products=[], afficherHorsStock, search}) => {
                         products.filter( (product) => 
                             (afficherHorsStock ? true : product.number > 0)
                             && 
-                            (product.name.includes(search))
+                            (product.name.toLowerCase().includes(search.toLowerCase()))
                         )
                         .map((product) => 
                             <tr key={product.name}>
@@ -117,14 +115,5 @@ const Enfant = ({products=[], afficherHorsStock, search}) => {
         </>
     );
 }
-
-
-
-
-
-
-
-
-
 
 export default Exercice;

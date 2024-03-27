@@ -36,6 +36,9 @@ function Navbar() {
               <a href="/flux">Flux</a>
             </li>
             <li>
+              <a href="/life-cycle">Cycle de vie</a>
+            </li>
+            <li>
               <a href="/exercice">Exercice</a>
             </li>
           </ul>
@@ -56,6 +59,9 @@ function Navbar() {
           <li>
             <a href="/flux">Flux</a>
           </li>
+          <li>
+              <a href="/life-cycle">Cycle de vie</a>
+            </li>
           <li>
               <a href="/exercice">Exercice</a>
           </li>

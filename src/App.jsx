@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import Formulaire from "./components/view/Formulaire";
 import Flux from "./components/view/Flux";
 import Exercice from "./components/view/Exercice";
+import LifeCycle from "./components/view/LifeCycle";
 
 function App() {
   return(
@@ -22,6 +23,7 @@ function App() {
             <Route path='/hook' element={<Hook/>} />
             <Route path='/formulaire' element={<Formulaire/>} />
             <Route path='/flux' element={<Flux/>} />
+            <Route path='/life-cycle' element={<LifeCycle/>} />
             <Route path='/exercice' element={<Exercice/>} />
           </Routes>
         </BrowserRouter>
