@@ -11,6 +11,7 @@ import Exercice from "./components/view/Exercice";
 import LifeCycle from "./components/view/LifeCycle";
 import { Hook } from "./components/view/Hook"
 import { RequeteHttp } from "./components/view/RequeteHttp";
+import { RequeteAvecCustomHook } from "./components/view/RequeteAvecCustomHook";
 
 export default function App() {
   return(
@@ -26,6 +27,7 @@ export default function App() {
             <Route path='/flux' element={<Flux/>} />
             <Route path='/life-cycle' element={<LifeCycle/>} />
             <Route path='/requete-http' element={<RequeteHttp/>} />
+            <Route path='/requete-hook' element={<RequeteAvecCustomHook/>} />
             <Route path='/exercice' element={<Exercice/>} />
           </Routes>
         </BrowserRouter>

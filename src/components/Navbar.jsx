@@ -42,6 +42,9 @@ function Navbar() {
               <a href="/requete-http">Les requêtes HTTP</a>
             </li>
             <li>
+              <a href="/requete-hook">Requêtes avec custom hook</a>
+            </li>
+            <li>
               <a href="/exercice">Exercice</a>
             </li>
           </ul>
@@ -67,6 +70,9 @@ function Navbar() {
             </li>
             <li>
               <a href="/requete-http">Les requêtes HTTP</a>
+            </li>
+            <li>
+              <a href="/requete-hook">Requêtes avec custom hook</a>
             </li>
           <li>
               <a href="/exercice">Exercice</a>

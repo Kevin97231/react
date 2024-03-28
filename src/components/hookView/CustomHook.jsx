@@ -16,14 +16,14 @@ export const CustomHook = () => {
         hook personnalisé qu'on réutilisera sur plusieurs composants
       </p>
       <Exemple1 />
-      <Exemple2/>
+      <Exemple2 />
     </>
   );
 };
 
 const Exemple1 = () => {
   const [checked, setChecked] = useState(false);
-  const [state, toggle] = useToggle(false)
+  const [state, toggle] = useToggle(false);
 
   const handleCheck = () => {
     setChecked((prevValue) => !prevValue);
@@ -32,12 +32,16 @@ const Exemple1 = () => {
   return (
     <>
       <div>
-        <p><strong>Sans le customHook</strong></p>
+        <p>
+          <strong>Sans le customHook</strong>
+        </p>
         <input type="checkbox" checked={checked} onChange={handleCheck} />
         {checked ? <p>Case cochée</p> : <p>Case non cochée</p>}
       </div>
       <div>
-        <p><strong>Avec le customHook</strong> </p>
+        <p>
+          <strong>Avec le customHook</strong>{" "}
+        </p>
         <input type="checkbox" checked={state} onChange={toggle} />
         {state ? <p>Case cochée</p> : <p>Case non cochée</p>}
       </div>
@@ -45,19 +49,46 @@ const Exemple1 = () => {
   );
 };
 
-
 const Exemple2 = () => {
+  const {count, increment, decrement} = useIncrement({});
 
-    const [count, increment] = useIncrement(0)
+  const {count: count2, increment: increment2, decrement: decrement2} = useIncrement({
+    min: 0,
+    max: 10
+  });
 
-    return (
-        <>
-            <p>
-                Je veux utiliser un hook personnalisé pour incrémenter / décrémenter une valeur
-            </p>
-                {count}
-            <br />
-            <button className="btn" onClick={increment}>+</button>
-        </>
-    )
-}
+  return (
+    <>
+      <div className="border">
+        <p>
+          Je veux utiliser un hook personnalisé pour incrémenter / décrémenter
+          une valeur
+        </p>
+        {count}
+        <br />
+        <button className="btn" onClick={increment}>
+          +
+        </button>
+        <button className="btn" onClick={decrement}>
+          -
+        </button>
+      </div>
+
+        {/* EXEMPLE 2 */}
+      <div className="border">
+        <p>
+          Je veux utiliser un hook personnalisé pour incrémenter / décrémenter
+          une valeur
+        </p>
+        {count2}
+        <br />
+        <button className="btn" onClick={increment2}>
+          +
+        </button>
+        <button className="btn" onClick={decrement2}>
+          -
+        </button>
+      </div>
+    </>
+  );
+};
