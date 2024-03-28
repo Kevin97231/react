@@ -1,6 +1,8 @@
 import { useState } from "react";
 import HookUseState from "../hookView/HookUseState";
 import {HookUseEffect} from "../hookView/HookUseEffect";
+import { HookUseMemo } from "../hookView/HookUseMemo";
+import { CustomHook } from "../hookView/CustomHook";
 
 
 export const Hook = () => {
@@ -8,14 +10,18 @@ export const Hook = () => {
   const [chosenItem, setChosenItem] = useState('useState')
   
     const renderHookComponent = () => {
-        switch (chosenItem) {
-            case 'useState':
-                return <HookUseState/>
-            case 'useEffect':
-                return <HookUseEffect/>
-            default:
-                return <></>
-        }
+      switch (chosenItem) {
+        case 'useState':
+            return <HookUseState/>
+        case 'useEffect':
+            return <HookUseEffect/>
+        case 'useMemo':
+          return <HookUseMemo/>
+        case 'customHook':
+          return <CustomHook/>
+        default:
+          return <></>
+      }
     }
 
     return (
@@ -28,6 +34,12 @@ export const Hook = () => {
           </li>
           <li onClick={() => setChosenItem('useEffect')}>
             <a>useEffect</a>
+          </li>
+          <li onClick={() => setChosenItem('useMemo')}>
+            <a>useMemo</a>
+          </li>
+          <li onClick={() => setChosenItem('customHook')}>
+            <a>customHook</a>
           </li>
         </ul>
       </div>

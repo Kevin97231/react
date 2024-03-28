@@ -12,7 +12,7 @@ import LifeCycle from "./components/view/LifeCycle";
 import { Hook } from "./components/view/Hook"
 import { RequeteHttp } from "./components/view/RequeteHttp";
 
-function App() {
+export default function App() {
   return(
     <>
     <Navbar/>
@@ -35,5 +35,3 @@ function App() {
     </>
   );
 }
-
-export default App;

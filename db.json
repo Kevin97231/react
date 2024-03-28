@@ -2,8 +2,8 @@
   "products": [
     {
       "name": "Test",
-      "price": "6",
-      "number": "27",
+      "price": "5",
+      "number": "4",
       "category": "Test",
       "id": "1"
     },
@@ -34,6 +34,13 @@
       "name": "Test",
       "number": "5",
       "price": "5"
+    },
+    {
+      "id": "21c0",
+      "category": "Fruits",
+      "name": "Test2",
+      "number": "2",
+      "price": "10"
     }
   ]
 }
